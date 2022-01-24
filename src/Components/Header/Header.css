@@ -9,14 +9,10 @@ body{
     background-color: black;
     height: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
     z-index: 1;
-}
-.header__img {
-    width: 60px;
-    margin-left: 50px;
 }
 .header__search-btn {
     width: 33px;
@@ -41,14 +37,7 @@ body{
 }
 .header__search{
     width: 50%;
-    display: none;
-}
-.dNone{
-    display: none !important;
-    
-}
-.dBlock{
-    display: block;
+    /* justify-self: center; */
 }
 .header__search-space{
     width: 85%;
