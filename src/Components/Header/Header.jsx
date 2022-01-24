@@ -25,7 +25,7 @@ function Header(){
     }, [movie, input, type, page])
 
     if(movie === undefined) {
-        location.reload()
+        window.location.reload()
     }
 
 
@@ -47,23 +47,15 @@ function Header(){
     <>
     
         <div className="header">
-            <a href="/">
-                <img src={monkey} className="header__img" alt="" />
-            </a>
             <div className="header__search">
                 <input type="text" className="header__search-space" />
                 <button 
                 className="header__submit-btn" 
                 onClick={(e) => setInput(e.target.previousElementSibling.value)}>Submit</button>
             </div>
-            <ul className="header__list" id="listId">
+            {/* <ul className="header__list" id="listId">
                 <li className="header__list-item">Home</li>
-            </ul>
-            <button className="header__search-btn" 
-            onClick={(e) => {
-                (e.target.parentElement.children[1]).classList.toggle("dBlock")
-                listId.classList.toggle("dNone")
-            }}></button>
+            </ul> */}
             <div className="filter">
                 <select className="form-select genres" id="genreSort" onChange={(e) => setType(e.target.value)}>
                     <option value="">Type</option>
@@ -71,7 +63,7 @@ function Header(){
                     <option value="series">Series</option>
                     <option value="episode">Episode</option>
                 </select>
-                <hr className="hr"/>
+                {/* <hr className="hr"/>
                 <div className="ratingBtns">
                     <select className="form-select ratings" id="ratingSort">
                         <option defaultValue="">Rating</option>
@@ -79,7 +71,7 @@ function Header(){
                         <option value="down">Low to High </option>
                     </select>
                     <span id="viewChanger"></span>
-                </div>
+                </div> */}
             </div>
         </div>
         <div className="main__btns">
