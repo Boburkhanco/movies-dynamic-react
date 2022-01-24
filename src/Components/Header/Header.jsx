@@ -21,7 +21,7 @@ function Header(){
         fetch(`http://www.omdbapi.com/?apikey=77d4cb8c&s=${input}&type=${type}&page=${page}`)
         .then(res => res.json())
         .then(movie => setMovie(movie.Search))
-    }, 3000);
+    }, 1500);
     }, [movie, input, type, page])
 
     if(movie === undefined) {
@@ -29,13 +29,6 @@ function Header(){
     }
 
 
-    // useEffect(() => {
-    //     fetch(`http://www.omdbapi.com/?apikey=77d4cb8c&i=${movieData}&plot=full`)
-    //     .then(res2 => res2.json())
-    //     .then(mdata => setMovieData(mdata))
-    // }, [movieData, setMovieData])
-
-    
     
     
     const currentPage = parseInt(page)
@@ -54,7 +47,7 @@ function Header(){
     <>
     
         <div className="header">
-            <a href="w">
+            <a href="/">
                 <img src={monkey} className="header__img" alt="" />
             </a>
             <div className="header__search">
@@ -65,9 +58,6 @@ function Header(){
             </div>
             <ul className="header__list" id="listId">
                 <li className="header__list-item">Home</li>
-                <li className="header__list-item">Movies</li>
-                <li className="header__list-item">Series</li>
-                <li className="header__list-item">Episodes</li>
             </ul>
             <button className="header__search-btn" 
             onClick={(e) => {
@@ -105,8 +95,8 @@ function Header(){
             ) : (
                 movie.map((item) => {
                 return (
-                <NavLink to={`/movieInfo/${item.Id}`} key={item?.Id} 
-                className="main__list-item item2" 
+                <NavLink to={`/movieInfo/${item.imdbID}`} key={item?.Id} 
+                className="main__list-item thisList" 
                 onClick={(e) => {
                     setMovieData(item?.imdbID)
                 }}>

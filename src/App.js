@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router';
 // import Main from './Components/Main/Main';
 import Header from "./Components/Header/Header"
 import MovieInfo from './Components/MovieInfo/MovieInfo';
+import "./assets/fonts/fonts.css"
 
 
 function App() {

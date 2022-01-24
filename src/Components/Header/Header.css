@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya:ital,wght@0,400;1,400;1,500&family=Alfa+Slab+One&family=Coda&family=Secular+One&family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500&family=Roboto:wght@100;300;400&display=swap');
 
 body{
     padding: 0;
     margin: 0;
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
 }
 .header {
     width: 100%;
@@ -80,7 +78,7 @@ body{
 .header__list {
     display: flex;
     width: 50%;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
     margin: 0;
 }
@@ -149,18 +147,19 @@ input:hover, select:hover, button:hover{
     background-repeat: no-repeat;
     background-size: 25px;
     background-position: center;
+    background-color: #000;
 }
 #viewChanger:hover{
     border-color: #a1a1a1;
     cursor: pointer;
-    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.829);
-    background-color: #c3c3c37e;
+    /* box-shadow: inset 0 0 10px 2px rgba(255, 255, 255, 0.829); */
+    filter: invert(1);
 }
 .hr{
     color: white;
     background-color: #fff;
     width: 69%;
-    padding: 2px;
+    padding: .2px;
     opacity: 100;
     height: 0;
 }
@@ -177,7 +176,7 @@ input:hover, select:hover, button:hover{
     margin: 0 auto;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: rgb(0, 60, 255);
+    background-color: rgb(0, 0, 0);
     padding: 0;
 }
 
@@ -190,42 +189,28 @@ input:hover, select:hover, button:hover{
 }
 
 .main__list-item:hover{
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
     transition: .7s;
-    box-shadow: inset 0 -50px 140px 45px rgb(0, 0, 0);
-    animation: myAnim 1s linear 0s 1 alternate both;
+    box-shadow: inset 0 -50px 140px 45px rgb(255, 255, 255);
+    animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
 @keyframes myAnim {
-    0%,
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
     100% {
-      transform: translateX(0%);
-      transform-origin: 50% 50%;
-    }
-  
-    15% {
-      transform: translateX(-15px) rotate(-3deg);
-    }
-  
-    30% {
-      transform: translateX(15px) rotate(6deg);
-    }
-  
-    45% {
-      transform: translateX(-15px) rotate(-3.6deg);
-    }
-  
-    60% {
-      transform: translateX(9px) rotate(2.4deg);
-    }
-  
-    75% {
-      transform: translateX(-6px) rotate(-1.2deg);
+      transform: scale(1);
     }
   }
 .main__list-item img{
-    border-radius: 10px;
+    border-radius: 5px;
     /* height: 220px; */
     max-height: 330px;
 }
@@ -233,7 +218,8 @@ input:hover, select:hover, button:hover{
     width: 400px;
     height: 400px;
     justify-self: center;
-    align-self: center;
+    /* align-self: center; */
+    margin-top: 100px;
 }
 .item2title{
     font-size: 20px;
@@ -246,7 +232,7 @@ input:hover, select:hover, button:hover{
     justify-content: center;
     padding: 5px;
     padding-top: 170px;
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
     margin: 0 auto;
 }
 
@@ -265,34 +251,37 @@ input:hover, select:hover, button:hover{
 .main__list-item{
     width: 220px;
     max-height: 440px;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(41, 41, 41);
     padding: 4px;
     font-family: lexend deca;
     letter-spacing: -1.6px;
     margin: 8px;
-    border-radius: 15px;
+    border-radius: 1px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     font-size: 10px;
     justify-content: space-between;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 /* Should Be Turned ons */
 
-/* .item2
+
+.item2{
     width: 550px;
     height: 100px;
     display: flex;
     padding: 5px;
     justify-content: space-between;
-    border-radius: 10px;
-    border: 1px solid #000;
+    border-radius: 2px;
+    border: 1px solid rgb(78, 78, 78);
     margin: 5px;
     font-family: lexend Deca;
     letter-spacing: -1.5px;
- */
+    text-decoration: none;
+    color: #fff;
+}
 
 
 
