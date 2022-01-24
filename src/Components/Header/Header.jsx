@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import shock from "./../../assets/images/Ripple-1.4s-197px.svg"
-import monkey from "./../../assets/images/mailchimp.svg"
 import "./Header.css"
 import {NavLink} from "react-router-dom"
 import useMovie from "../../Hook/useMovie";
